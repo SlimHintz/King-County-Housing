@@ -51,3 +51,6 @@ docs/_build/
 
 .DS_Store
 .ipynb_checkpoints
+.DS_Store
+__pycache__
+.ipynb_checkpoints
