@@ -50,7 +50,7 @@ For Lasso regression I used an alpha of 0.01, 0.02 and 0.03 but visually I did n
 ### Results
 
 #### The location of the house is important in determining it's price 
-![img](./images/predictionDistributions.png )
+![img](./images/kingcountyMap.png )
 
 Houses located near water or clustered together with outher houses have a much higher price than those inland and in isolation. 
 
