@@ -66,11 +66,12 @@ I was interested in the interplay between features. I looked at the relationship
 
 I decided that if there was a multiplicative relationship 
 
-#### Lasso didn't not yeild a signeficantly different prediction than regular Linear regression
+#### Lasso didn't not yield a significantly better predictions than regular Linear regression
 ![img](./images/predictionDistributions.png)
 
-I ran a Lasso Regression model in parallel to the 
+I ran a Lasso Regression model in parallel to with my regression model and Levene failed to reject  indicating that the distribution of my predictions for the two models was similar. 
 
+However, the RMSE for the my Lasso regression was upwards of 500k. This was inline with my findings from RFE and K best feature selection hurting my model.
 #### Conclusions
 
 I created a black box model. The conclusions are not easy to explain. In particular, the colinearity between the features and feature interactions means that the traditional interpretation of:
@@ -82,7 +83,9 @@ However, our goal was to predict the house price, not build an inferential model
 
 #### Further Research
 
-- Scrape the web for zipcode census data to enrich the 
+- Scrape the web for zipcode census data to enrich the my spatial data
+- Scrape the web for locations of schools and public transport to increase spatial data
+- Look for the ratio between listings and sales throughout a year. Domain research indiates that is an important seasonal variable. 
 
 #### Navigation
 - `finalModel.ipynb`: Model development as statistical analysis
