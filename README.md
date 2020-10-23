@@ -66,7 +66,7 @@ I was interested in the interplay between features. I looked at the relationship
 
 I decided that if there was a multiplicative relationship 
 
-#### Lasso didn't not yield a significantly better predictions than regular Linear regression
+#### Lasso did not yield a significantly better predictions than regular Linear regression
 ![img](./images/predictionDistributions.png)
 
 I ran a Lasso Regression model in parallel to with my regression model and Levene failed to reject  indicating that the distribution of my predictions for the two models was similar. 
