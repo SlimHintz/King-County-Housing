@@ -96,3 +96,86 @@ However, our goal was to predict the house price, not build an inferential model
 - `README.md`: Display document containing our key findings and this sentence.
 - `src.py`: Collected functions utilized for both data cleaning and EDA
 
+## Github Structure
+.
+├── README.md
+├── cleanedData
+│   ├── X.imputed.csv
+│   ├── featureRankingInteraction.csv
+│   ├── geoOverlap.csv
+│   ├── geohashed_full.csv
+│   ├── geopandasTraining.csv
+│   ├── hdb_clusters.csv
+│   ├── holdoutGeo.csv
+│   ├── holdoutScaledfinal.csv
+│   ├── holdoutSeason.csv
+│   ├── holdoutZipcodes.csv
+│   ├── modelOne.csv
+│   ├── modeltwo.csv
+│   ├── seasonDummies.csv
+│   ├── weekMonthDummies.csv
+│   ├── xScaledFinal.csv
+│   └── zipcodeDummies.csv
+├── eda
+│   ├── ModelOne.ipynb
+│   ├── Months.ipynb
+│   ├── Selecting\ key\ regions.ipynb
+│   ├── Traingeohashing.ipynb
+│   ├── featureNormalization.ipynb
+│   ├── fixingBathBeds.ipynb
+│   ├── geohashingClustering.ipynb
+│   ├── holdoutZipcodes.ipynb
+│   ├── logTransformations.ipynb
+│   ├── mapping.ipynb
+│   ├── modelThree-Copy1.ipynb
+│   ├── modelThree.ipynb
+│   ├── modelTwo.ipynb
+│   ├── month_dummy_model.ipynb
+│   ├── outlierImputation.ipynb
+│   └── timeseriesInvestigation.ipynb
+├── finalModel.ipynb
+├── images
+│   ├── bath_bed.png
+│   ├── kingcountyMap.png
+│   ├── predictionDistributions.png
+│   ├── seasons.png
+│   └── seattle.jpg
+├── model
+│   ├── housing_preds_Tim_hintz.csv
+│   ├── housing_preds_your_name.csv
+│   ├── model.pickle
+│   ├── predictionLasso.csv
+│   ├── predictionsLr.csv
+│   ├── predictionsOne.csv
+│   ├── predictionsTwo.csv
+│   └── scalar.pickle
+├── raw
+│   ├── X.csv
+│   ├── X_full_model_one.csv
+│   ├── X_trainmodelOne.csv
+│   ├── bedrooms\ 2.csv
+│   ├── bedrooms.csv
+│   ├── bedroomsfilled\ 2.csv
+│   ├── bedroomsfilled.csv
+│   ├── extradata.xlsx
+│   ├── kc_holdout_data.csv
+│   ├── kc_house_data_train.csv
+│   ├── mapping
+│   │   ├── L&I_-_City_Limits_(Statewide)-shp
+│   │   │   ├── CityLimits.cpg
+│   │   │   ├── CityLimits.dbf
+│   │   │   ├── CityLimits.prj
+│   │   │   ├── CityLimits.shp
+│   │   │   └── CityLimits.shx
+│   │   └── kingscounty-shp
+│   │       ├── Cities_and_Unincorporated_King_County___city_kc_area.cpg
+│   │       ├── Cities_and_Unincorporated_King_County___city_kc_area.dbf
+│   │       ├── Cities_and_Unincorporated_King_County___city_kc_area.prj
+│   │       ├── Cities_and_Unincorporated_King_County___city_kc_area.shp
+│   │       ├── Cities_and_Unincorporated_King_County___city_kc_area.shx
+│   │       └── Cities_and_Unincorporated_King_County___city_kc_area.xml
+│   └── y.csv
+└── src.py
+
+
+
