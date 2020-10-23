@@ -96,7 +96,7 @@ However, our goal was to predict the house price, not build an inferential model
 - `README.md`: Display document containing our key findings and this sentence.
 - `src.py`: Collected functions utilized for both data cleaning and EDA
 
-## Github Structure
+## Repo Structure
 <pre>.
 ├── README.md
 ├── cleanedData
