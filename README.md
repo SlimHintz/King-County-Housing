@@ -1,8 +1,10 @@
-# Kings County Housing Price Preditions
+# King County Housing Price Predictions
 
-**Authors**: [Tim Hintz](mailto:tjhintz@gmail.com)
+### Using linear regression to predict housing prices in Seattle
 
-![img](./images/seattle)
+**Author**: [Tim Hintz](mailto:tjhintz@gmail.com)
+
+![img](./images/seattle.jpg)
 
 ## Overview
 
@@ -49,55 +51,45 @@ For Lasso regression I used an alpha of 0.01, 0.02 and 0.03 but visually I did n
 
 ### Results
 
+
 #### The location of the house is important in determining it's price 
 ![img](./images/kingcountyMap.png )
 
-Houses located near water or clustered together with outher houses have a much higher price than those inland and in isolation. 
+Houses located near water or clustered together with other houses have a much higher price than those inland and in isolation. 
 
-When I ran a RFE to determine the most important features, I found that all of the top 10 were either geohashes or zipcodes. However, as they were dummy columns 
+When I ran a RFE to determine the most important features, I found that all of the top 10 were either geohashes or zipcodes indicating that they had the most significant correlation. However, as they were dummy columns and I had a lot of colinearity between features. For instance, geohash and zipcode is almost perfectly correlated. Therefore the interpretation becomes difficult. The zipcode for Bellevue (98093) was also significant, and when I decoded the top 5 geohashes they were all along the water front, near down town 
 
-#### There was a signeficant effect of interactions between variables
+#### There was a signeficant effect of interactions between key variables 
 ![img](./images/bath_bed.png)
 
-During our research we found that some genres are particulalry risky investments in the current market. Westerns and News based movies seem to do badly especially when the budget for them is low. 
+I was interested in the interplay between features. I looked at the relationship between number of bedrooms, number of bathrooms and then I looked at the correlation between the interaction. I found that bathrooms times bedrooms correlated more heavily and significantly with price than either  bathrooms or bedrooms aloned. Each increase in bathroom increases the value of a home by $26,000 whereas if bed and bath increase together, the increase in value was $60,000. 
 
-On the other hand low budget fantasy, mystery and horror do relatively well. 
+I decided that if there was a multiplicative relationship 
 
-Interpreting the first sections findings we think the soundest strategy is an investment in high budget musicals and sports movies with a modertate investment in low budget horror, thriller and crimes movies.
-
-
-#### Month of Release Had Little Bearing on ROI
+#### Lasso didn't not yeild a signeficantly different prediction than regular Linear regression
 ![img](./images/predictionDistributions.png)
 
-Finally, we examined the effect of month/seasonality on the ROI of movies released. From this chart, there is little evidence of an effect of month on ROI.
-
+I ran a Lasso Regression model in parallel to the 
 
 #### Conclusions
 
-It is our opinion that if Microsoft wishes to get into the movie industry, the safest way to do so would be to invest heavily into large, blockbuster type films particularly Musicals and Sports based movies to do well. So long as they invest a over 100 million in their movies, they should be fine.
+I created a black box model. The conclusions are not easy to explain. In particular, the colinearity between the features and feature interactions means that the traditional interpretation of:
+"How much does price change in response to a change in feature x when all other features don't change?" is impossible to answer when we are interacting variables.
 
-However, smaller budget films have almost a 15% chance of returning over 1000%. This is something that should be investigated further. In particular, Horror, Crime and Mystery films can yeild an enormous ROI under some currently undiscovered conditions. It is our opinion that any studio should be investing in lower budget indie films in order to maximise their chances of returning on their investment.
+However, our goal was to predict the house price, not build an inferential model. With 420 variables we had an RMSE of 129K. This gives an error of 0.24% (RMSE/mean). 
+
+
 
 #### Further Research
 
-- Our data is only a small subset of the available information. Supplementary data should be used in further analysis in order to: 
-    - Try to replicate our findings
-    - Perform more powerful statistical analysis
-
-
-- We in each category there was a signeficant amount of outliers
-
-- We did not look into the effect of celebrity on the success of a movie. A paper published in 2017 (François A. Carrillat et al. Debates and assumptions about motion picture performance: a meta-analysis, Journal of the Academy of Marketing Science (2017). DOI: 10.1007/s11747-017-0561-6) gave strong evidence that most important factors involved in a movies success are
-    - Fame of the Actors
-    - Marketing Budget
-    - Number of screens released on
-
+- Scrape the web for zipcode census data to enrich the 
 
 #### Navigation
-- `microsoft-studios-eda.ipynb`: The final notebook containing our collected work and discussions
-- `datacleaning`: Notebooks containing the authors preliminary EDA and data cleaning
-- `rawdata`: File containing our wrangled and cleaned data sets
-- `zippedData`: Original data obtained through the Flatiron School
+- `finalModel.ipynb`: Model development as statistical analysis
+- `./eda`: file containing preliminary data analysis and visualisations
+- `./raw`: File containing raw data files including shape files
+- `./cleaned`: Original data obtained through the Flatiron School
+- `./model`: Where my models are stored. Model one and model two
 - `README.md`: Display document containing our key findings and this sentence.
 - `src.py`: Collected functions utilized for both data cleaning and EDA
 
