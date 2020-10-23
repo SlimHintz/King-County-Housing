@@ -97,7 +97,7 @@ However, our goal was to predict the house price, not build an inferential model
 - `src.py`: Collected functions utilized for both data cleaning and EDA
 
 ## Github Structure
-.
+<pre>.
 ├── README.md
 ├── cleanedData
 │   ├── X.imputed.csv
@@ -176,6 +176,6 @@ However, our goal was to predict the house price, not build an inferential model
 │   │       └── Cities_and_Unincorporated_King_County___city_kc_area.xml
 │   └── y.csv
 └── src.py
-
+<pre>
 
 
