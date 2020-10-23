@@ -77,7 +77,7 @@ However, the RMSE for the my Lasso regression was upwards of 500k. This was inli
 I created a black box model. The conclusions are not easy to explain. In particular, the colinearity between the features and feature interactions means that the traditional interpretation of:
 "How much does price change in response to a change in feature x when all other features don't change?" is impossible to answer when we are interacting variables.
 
-However, our goal was to predict the house price, not build an inferential model. With 420 variables we had an RMSE of 129K. This gives an error of 0.24% (RMSE/mean). 
+However, our goal was to predict the house price, not build an inferential model. With 420 variables we had an RMSE in both the lasso and the linear regression modeels of 129K. This gives an error of 0.24% (RMSE/mean). 
 
 
 
