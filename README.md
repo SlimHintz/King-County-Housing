@@ -9,7 +9,7 @@
 ## Overview
 
 
-The present research utilized the King County data set to build a predictive linear model of housing prices in that region. The present model generated 420 features via interactions and polynomial columns as well as some non-linear transformations of the square footage columns. 
+This project utilized the King County data set to build a predictive linear model of housing prices in that region. The present model generated 420 features via interactions and polynomial columns as well as some non-linear transformations of the square footage columns. 
 
 I made a focus on geospatial analysis. Due to time constraints, I was unable to scrape location data for key features like good schools, water fronts and public transport. Instead I used Geohash2 to fit a z-space curve filling line to my region. I then dummied all of the columns and included them in my dataset. 
 
